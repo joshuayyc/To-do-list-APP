@@ -67,8 +67,8 @@ button:hover {
 .todoList {
     background-color: #FFFFFF;
     border-radius: 5px;
-    margin-top 20:px;
-    padding: 10px, 25px;
+    margin-top: 20px;
+    padding: 10px 25px;
     height: 100%;
 }
 
@@ -84,6 +84,12 @@ li {
     padding: 15px 0;
     font-size: 1rem;
     color: #595959;
+}
+
+/* flexgrow moves icons to right side */
+.todo-item {
+    flex-grow: 1;
+
 }
 
 .clearAll {
