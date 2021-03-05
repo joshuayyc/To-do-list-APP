@@ -1,8 +1,11 @@
 // Selectors
 // Use query selector to retrieve element reference to form elements
 // Call addEventListener to register handleSubmitForm fx to handle submit event
+// Use query selector to retrieve elemtn reference to ul elements
+// Call addEventListener to register handleclickdeleteorcheck fx to handle icon clicks
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
-
+document.querySelector('ul').addEventListener('click', handleClickDeleteOrCheck);
+document.getElementbyId('clearAll').addEventListener('click', handleClearAll);
 // Event Handler
 // e.preventDefault prevents default form submit behavior
 // Retrieve input using Query Selector and store as element reference
@@ -16,6 +19,18 @@ function handleSubmitForm(e) {
     if (input.value != '')
         addTodo(input.value);
     input.value = '';
+}
+
+function handleClickDeleteOrCheck(e) {
+    if (e.target.name == 'checkButton')
+        checkTodo(e);
+        
+    if (e.target.name == 'deleteButton')
+        deleteTodo(e);
+}
+
+function handleClearAll(e) {
+    document.querySelector('ul').innerHTML = '';
 }
 
 // Helper functions
@@ -37,4 +52,20 @@ function addTodo(todo) {
     li.classList.add('todo-list-item');
     // Finally, new li element is added as a child to the ul element, so that it becomes visible in browser
     ul.appendChild(li);
+}
+
+function checkTodo(e) {
+    let item = e.target.parentNode;
+    if (item.style.textDecoration == 'line-through')
+        item.style.textDecoration = 'none';
+    else
+        item.style.textDecoration = 'line-through';
+}
+
+function deleteTodo(e) {
+    let item = e.target.parentNode;
+    item.addEventListener('transitionend', function() {
+        item.remove();
+    })
+    item.classList.add('todo-list-item-fall');
 }

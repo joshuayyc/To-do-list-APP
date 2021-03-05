@@ -86,6 +86,11 @@ li {
     color: #595959;
 }
 
+/* Important! make sure no pointer events and click events are caputred for those elements */
+i {
+    pointer-events: none;
+}
+
 /* flexgrow moves icons to right side */
 .todo-item {
     flex-grow: 1;
@@ -102,4 +107,13 @@ li {
 
 .clearAll:hover {
     color: lightcoral;
+}
+
+.todo-list-item {
+    transition: all 0.3s ease-out;
+}
+
+.todo-list-item-fall {
+    transform: translateY(12rem) rotateZ(10deg);
+    opacity: 0;
 }
