@@ -13,8 +13,39 @@
     <!-- obtain icons from fontawesome cdn-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
 </head>
+<!-- Add body class container -->
 <body class ="container">
-    <h1> Javascript Todo App </h1>
+<!-- Header section added with logo and headline-->
+    <header class="logo">
+        <!-- logo added with link to codingsmart website -->
+        <!-- image added from own folder and resized -->
+        <a href="https://codingthesmartway.com" target="_blank">
+            <img class="logo" src="images/javascript-2189147_640.png" alt="codingTheSmartWay.com" width="200" height="120">
+        </a>
+        <h2 class="headline"> Javascript Todo App </h2>
+    </header>
+<!-- Div element added -->
+<!-- Add form into the div section -->
+<!-- Form allows user to input and create new tasks, contains 2 elements -->
+    <div class="main">
+        <form>
+            <!-- Create input element that allows user to input task description-->
+            <input type="text" placeholder="New Task...">
+            <!-- Add button and get the icon look from fontawesome library using classes fas and fa-plus-square-->
+            <!-- Button used to submti the form -->
+            <button type="submit"><i class="fas fa-plus-square"></i></button>
+        </form>
+        <!-- Create another div with a class todoList-->
+        <!-- Div block used to output list of tasks (empty ul element) -->
+        <div class="todoList">
+            <ul>
+
+            </ul>
+            <!-- Add text element which will be used for clearing the list -->
+            <a class="ClearAll" id="clearAll"> Clear All </a>
+    </div>
+
+    </main>
     <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
