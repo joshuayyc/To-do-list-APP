@@ -1,0 +1,10 @@
+/* Add basic headers, div and body styling */
+
+
+h1 {font-size: 20px; font-style:normal;; text-align:center;}
+
+h2 {font-size: 15px; font-style:normal;; text-align:left;}
+
+div {padding: 10px; margin: 10px}
+
+body {text-align: left; word-wrap: break-word;}
