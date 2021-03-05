@@ -1,10 +1,99 @@
-/* Add basic headers, div and body styling */
+/* Add styling for html and background gradient colour */
+html {
+    height: 100vh;
+    min-width: 600px;
+    background-image: linear-gradient(130deg, #FFFFFF, #1C3F80 );
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 
+/* container applied to the body element */
+.container {
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    font-family: 'Raleway', sans-serif;
+}
 
-h1 {font-size: 20px; font-style:normal;; text-align:center;}
+.logo {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 1.5rem;
+    align-items: center;
+}
 
-h2 {font-size: 15px; font-style:normal;; text-align:left;}
+/* applied to div element used to ouput to do items */
+.main {
+    padding: 20px;
+}
 
-div {padding: 10px; margin: 10px}
+/* form used for input and button */
+form {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+}
 
-body {text-align: left; word-wrap: break-word;}
+/* allows to apply css to input text type section only */
+input[type="text"] {
+    height: 30px;
+    outline: 0;
+    border: none;
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+    color: #595959;
+    flex-grow: 1;
+
+}
+
+/* Style button and hover */
+button {
+    font-size:1.5rem;
+    background-color:#FFFFFF;
+    outline: 0;
+    border: none;
+    color: #595959;
+}
+
+button:hover {
+    color: lightcoral;
+}
+
+.todoList {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    margin-top 20:px;
+    padding: 10px, 25px;
+    height: 100%;
+}
+
+ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+li {
+    display:flex;
+    align-items: center;
+    border-bottom: 1px solid lightgrey;
+    padding: 15px 0;
+    font-size: 1rem;
+    color: #595959;
+}
+
+.clearAll {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 3px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.clearAll:hover {
+    color: lightcoral;
+}
