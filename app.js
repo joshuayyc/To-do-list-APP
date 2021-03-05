@@ -5,7 +5,7 @@
 // Call addEventListener to register handleclickdeleteorcheck fx to handle icon clicks
 document.querySelector('form').addEventListener('submit', handleSubmitForm);
 document.querySelector('ul').addEventListener('click', handleClickDeleteOrCheck);
-document.getElementbyId('clearAll').addEventListener('click', handleClearAll);
+document.getElementById('clearAll').addEventListener('click', handleClearAll);
 // Event Handler
 // e.preventDefault prevents default form submit behavior
 // Retrieve input using Query Selector and store as element reference
@@ -24,7 +24,7 @@ function handleSubmitForm(e) {
 function handleClickDeleteOrCheck(e) {
     if (e.target.name == 'checkButton')
         checkTodo(e);
-        
+
     if (e.target.name == 'deleteButton')
         deleteTodo(e);
 }
